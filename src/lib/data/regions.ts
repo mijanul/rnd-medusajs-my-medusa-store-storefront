@@ -16,7 +16,9 @@ export const listRegions = async () => {
       next,
       cache: "force-cache",
     })
-    .then(({ regions }) => regions)
+    .then((response) => {
+      return response.regions
+    })
     .catch(medusaError)
 }
 
