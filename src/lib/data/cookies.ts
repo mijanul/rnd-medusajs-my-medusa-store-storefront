@@ -40,6 +40,11 @@ export const getCacheOptions = async (
     return {}
   }
 
+  // Disable caching if DISABLE_CACHE is set to true
+  if (process.env.DISABLE_CACHE === "true") {
+    return {}
+  }
+
   const cacheTag = await getCacheTag(tag)
 
   if (!cacheTag) {

@@ -37,7 +37,8 @@ export const retrieveCustomer =
         },
         headers,
         next,
-        cache: "force-cache",
+        cache:
+          process.env.DISABLE_CACHE === "true" ? "no-store" : "force-cache",
       })
       .then(({ customer }) => customer)
       .catch(() => null)

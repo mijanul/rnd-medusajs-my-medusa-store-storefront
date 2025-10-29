@@ -23,7 +23,8 @@ export const listCartShippingMethods = async (cartId: string) => {
         },
         headers,
         next,
-        cache: "force-cache",
+        cache:
+          process.env.DISABLE_CACHE === "true" ? "no-store" : "force-cache",
       }
     )
     .then(({ shipping_options }) => shipping_options)
