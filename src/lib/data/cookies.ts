@@ -87,3 +87,12 @@ export const removeCartId = async () => {
     maxAge: -1,
   })
 }
+
+export const getCountryCode = async (): Promise<string> => {
+  const cookies = await nextCookies()
+  return (
+    cookies.get("_medusa_country_code")?.value ||
+    process.env.NEXT_PUBLIC_DEFAULT_REGION ||
+    "in"
+  )
+}
