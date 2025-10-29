@@ -49,8 +49,7 @@ const Hero = () => {
               size="large"
               className="primary-btn group px-8 py-4 text-lg font-semibold bg-gradient-to-r from-primary-600 via-primary-500 to-accent-600 hover:from-primary-700 hover:via-primary-600 hover:to-accent-700 shadow-glow hover:shadow-xl transition-all duration-500 hover:scale-105 active:scale-95 relative overflow-hidden"
             >
-              <span>Explore Collection</span>
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              Explore Collection
             </Button>
           </LocalizedClientLink>
 
